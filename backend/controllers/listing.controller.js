@@ -44,7 +44,6 @@ export const getListing = async (req, res) => {
       .populate("host", "_id name email")
      .populate("guest", "_id name email")
      .sort({ createdAt: -1 });
-  console.log("Listing Data:", listing);
     return res.status(200).json(listing);
   } catch (error) {
     return res.status(500).json({ message: `getListing error ${error}` });
