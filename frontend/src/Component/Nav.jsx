@@ -138,11 +138,10 @@ function Nav() {
           </button>
           {showpopup && (
             <div
-              className="w-[240px] bg-white rounded-2xl shadow-2xl border border-gray-200 absolute top-[110%] right-[3%] overflow-hidden"
+              className="w-[240px] bg-white rounded-2xl shadow-2xl border border-gray-200 absolute top-[110%] right-0 z-[9999]"
             >
               <ul
-                className="w-[100%] h-[100%] text-[17px]
-            flex items-start justify-around flex-col py-[10px]"
+                className="text-[17px] py-2"
               >
                 {!userData && (
                   <li
