@@ -7,21 +7,21 @@ import isAdmin from "../middleware/isAdmin.js";
 let listingRouter = express.Router()
 
 
-listingRouter.post("/add", isAuth, isAdmin, upload.fields([
+listingRouter.post("/add",isAuth,isAdmin,upload.fields([
     {name:"image1",maxCount:1},
     {name:"image2",maxCount:1},
     {name:"image3",maxCount:1}
 ]),addListing)
 
 
-listingRouter.get("/get", getListing)
-listingRouter.get("/findlistingbyid/:id", isAuth,findListing)
+listingRouter.get("/get",getListing)
+listingRouter.get("/findlistingbyid/:id",isAuth,findListing)
 listingRouter.delete("/delete/:id",isAuth,isAdmin,deleteListing)
 listingRouter.post("/ratings/:id",isAuth,ratingListing)
-listingRouter.get("/search", search)
+listingRouter.get("/search",search)
 
 
-listingRouter.post("/update/:id", isAuth,isAdmin,upload.fields([
+listingRouter.post("/update/:id",isAuth,isAdmin,upload.fields([
     {name:"image1",maxCount:1},
     {name:"image2",maxCount:1},
     {name:"image3",maxCount:1}
