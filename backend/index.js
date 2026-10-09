@@ -18,7 +18,7 @@ app.use(cookieParser());
 app.use(cors({
   origin: [
     "http://localhost:5173",
-    "https://airbnb-platform-frontend.onrender.com"
+    "https://airbnb-platforml.vercel.app"
   ],
   credentials: true
 }));
